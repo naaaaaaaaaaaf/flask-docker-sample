@@ -9,6 +9,8 @@ services:
       - "5000:5000"
     volumes:
       - "./src:/projects"
+    env_file:
+      - ./src/db.env
     environment:
       TZ: "Asia/Tokyo"
       FLASK_ENV: "development"
